@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+
+    <user id="ZW7DOR">
+        <firstname>Palkó</firstname>
+        <lastname>Patrik</lastname>
+        <profession>Software Engineer</profession>
+    </user>
+    
+    <user id="RKA42R">
+        <firstname>Kristóf</firstname>
+        <lastname>László</lastname>
+        <profession>Software Developer</profession>
+    </user>
+    
+   <user id="ROT49R">
+        <firstname>Lap</firstname>
+        <lastname>Gönczi</lastname>
+        <profession>Software Tester</profession>
+    </user>    
+
+</users>
