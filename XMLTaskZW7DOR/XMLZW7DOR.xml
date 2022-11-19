@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kiszallito_rendszer xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaZW7DOR.xsd">
+
+    <!--Étterem-->
+
+    <etterem ET_ID="1">
+        <Nyitvatartas>11től 22:30ig</Nyitvatartas>
+		<Nev>Kalipszo</Nev>
+        <Elerhetoseg>
+            <Telefonszam>209876543</Telefonszam>
+		    <Weboldal>kalipszo.hu</Weboldal>
+        </Elerhetoseg>
+    </etterem>
+
+    <etterem ET_ID="2">
+        <Nyitvatartas>9től 21ig</Nyitvatartas>
+		<Nev>Vendelin</Nev>
+        <Elerhetoseg>
+            <Telefonszam>208765432</Telefonszam>
+		    <Weboldal>vendelin.hu</Weboldal>
+        </Elerhetoseg>
+    </etterem>
+
+    <etterem ET_ID="3">
+        <Nyitvatartas>8tól 22ig</Nyitvatartas>
+		<Nev>Molnár Csárda</Nev>
+        <Elerhetoseg>
+            <Telefonszam>306876546</Telefonszam>
+		    <Weboldal>molnarcsarda.hu</Weboldal>
+        </Elerhetoseg>
+    </etterem>
+
+
+    <!--Futár-->
+
+    <futar F_ID="1" ET_IDREF="1">
+        <Nev>Nagy Tíbor</Nev>
+		<Telefonszam>202354342</Telefonszam>
+    </futar>
+
+    <futar F_ID="2" ET_IDREF="2">
+        <Nev>Horváth Lajos</Nev>
+		<Telefonszam>203521958</Telefonszam>
+    </futar>
+
+    <futar F_ID="3" ET_IDREF="3">
+        <Nev>Palkó Patrik</Nev>
+		<Telefonszam>202572553</Telefonszam>
+    </futar>
+
+    <!--Beszállító-->
+
+    <beszallito Be_ID="1">
+        <Nev>Kis Piac</Nev>
+        <Elerhetoseg>kis.piac@gmail.com</Elerhetoseg>
+        <Cim>
+            <Varos>Kazincbarcika</Varos>
+            <Iranyitoszam>3700</Iranyitoszam>
+            <Utca>Fő utca</Utca>
+            <Hazszam>35</Hazszam>
+        </Cim>
+    </beszallito>
+
+    <beszallito Be_ID="2">
+        <Nev>Nagy piac</Nev>
+        <Elerhetoseg>nagy.piac@gmail.com</Elerhetoseg>
+        <Cim>
+            <Varos>Encs</Varos>
+            <Iranyitoszam>3896</Iranyitoszam>
+            <Utca>Fő utca</Utca>
+            <Hazszam>25</Hazszam>
+        </Cim>
+    </beszallito>
+
+    <beszallito Be_ID="3">
+        <Nev>Közepes piac</Nev>
+        <Elerhetoseg>közepes.piac@gmail.com</Elerhetoseg>
+        <Cim>
+            <Varos>Miskolc</Varos>
+            <Iranyitoszam>3885</Iranyitoszam>
+            <Utca>Fő utca</Utca>
+            <Hazszam>15</Hazszam>
+        </Cim>
+    </beszallito>
+
+    <!--Beszállítás-->
+
+    <beszallitas Be_IDREF="1" ET_IDREF="1">
+        <Hozzavalo>banán</Hozzavalo>
+        <Datum>2022.08.06</Datum>
+    </beszallitas>
+
+    <beszallitas Be_IDREF="2" ET_IDREF="2">
+        <Hozzavalo>csoki</Hozzavalo>
+        <Datum>2022.03.01</Datum>
+    </beszallitas>
+
+    <beszallitas Be_IDREF="3" ET_IDREF="3">
+        <Hozzavalo>alma</Hozzavalo>
+        <Datum>2022.10.21</Datum>
+    </beszallitas>
+
+    <!--Étel-->
+
+    <etel Etel_ID="1" ET_IDREF="1">
+        <etel_neve>Banános palacsinta</etel_neve>
+        <teljes_ar>2500</teljes_ar>
+    </etel>
+
+    <etel Etel_ID="2" ET_IDREF="2">
+        <etel_neve>Csokis zserbó</etel_neve>
+        <teljes_ar>3400</teljes_ar>
+    </etel>
+
+    <etel Etel_ID="3" ET_IDREF="3">
+        <etel_neve>Disznó almával a szájában</etel_neve>
+        <teljes_ar>25000</teljes_ar>
+    </etel>
+
+    <!--Vevő-->
+
+    <vevo vevo_ID="1">
+        <Nev>Palkó Zsolt</Nev>
+        <Telefonszam>202566311</Telefonszam>
+        <Cim>
+            <Utca>Károlyi Gáspár</Utca>
+            <Varos>Szerencs</Varos>
+            <Hazszam>5</Hazszam>
+            <Iranyitoszam>3880</Iranyitoszam>
+        </Cim>
+    </vevo>
+
+    <vevo vevo_ID="2">
+        <Nev>Lakatos Valentin</Nev>
+        <Telefonszam>202599210</Telefonszam>
+        <Cim>
+            <Utca>Kálmán</Utca>
+            <Varos>Budapest</Varos>
+            <Hazszam>31</Hazszam>
+            <Iranyitoszam>3550</Iranyitoszam>
+        </Cim>
+    </vevo>
+
+    <vevo vevo_ID="3">
+        <Nev>Raul Patricio</Nev>
+        <Telefonszam>202599901</Telefonszam>
+        <Cim>
+            <Utca>Nagy Lajos</Utca>
+            <Varos>Pálháza</Varos>
+            <Hazszam>2</Hazszam>
+            <Iranyitoszam>3770</Iranyitoszam>
+        </Cim>
+    </vevo>
+    
+    <!--Bankártya-->
+
+    <bankartya kartyaszam="7629746286234247" vevo_IDREF="1">
+        <Bank>OTP</Bank>
+        <Lejarati_datum>2025.10.28</Lejarati_datum>
+        <Tipus>betéti kártya</Tipus>
+    </bankartya>
+
+    <bankartya kartyaszam="(0543345349664954" vevo_IDREF="1">
+        <Bank>MKB</Bank>
+        <Lejarati_datum>2025.10.29</Lejarati_datum>
+        <Tipus>hitelkártya</Tipus>
+    </bankartya>
+
+    <bankartya kartyaszam="5432467233423432" vevo_IDREF="1">
+        <Bank>CIB Bank</Bank>
+        <Lejarati_datum>2025.10.30</Lejarati_datum>
+        <Tipus>többfunkciós kártya</Tipus>
+    </bankartya>
+
+</kiszallito_rendszer>
