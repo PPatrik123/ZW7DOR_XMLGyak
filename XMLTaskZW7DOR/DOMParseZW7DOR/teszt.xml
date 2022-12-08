@@ -79,7 +79,7 @@
                     
         </futar>
             
-        <futar F_ID="4">
+        <futar ET_IDREF="4" F_ID="4">
             <Nev>Katona János</Nev>
             <Telefonszam>200000</Telefonszam>
         </futar>
@@ -201,10 +201,10 @@
                     
         </etel>
             
-        <etel Etel_ID="4">
+        <etel ET_IDREF="4" Etel_ID="4">
             <etel_neve>Mákos Guba</etel_neve>
             <teljes_ar>7000</teljes_ar>
-            <ET_IDREF>4</ET_IDREF>
+            
         </etel>
     </etelek>
         
