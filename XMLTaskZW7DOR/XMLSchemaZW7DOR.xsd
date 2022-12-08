@@ -1,108 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
      
-       <xs:element name="kiszallito_rendszer">
-              <xs:complexType>
-                     <xs:sequence>
-                            <xs:element name="etterem" maxOccurs="unbounded">
-                                   <xs:complexType>
-                                          <xs:sequence>
-                                                 <xs:element name="Nyitvatartas" type="xs:string"></xs:element>
-                                                 <xs:element name="Nev" type="xs:string"></xs:element>
-                                                 <xs:element name="Elerhetoseg">
-                                                        <xs:complexType>
-                                                               <xs:sequence>
-                                                                      <xs:element name="Telefonszam" type="xs:int"></xs:element>
-                                                                      <xs:element name="Weboldal" type="xs:string"></xs:element>
-                                                                  </xs:sequence>
-                                                           </xs:complexType>
-                                                    </xs:element>
-                                             </xs:sequence>
-                                          <xs:attribute name="ET_ID" type="xs:int"></xs:attribute>
-                                      </xs:complexType>
-                               </xs:element>
-                            <xs:element name="futar" maxOccurs="unbounded">
-                                   <xs:complexType>
-                                          <xs:sequence>
-                                                 <xs:element name="Nev" type="xs:string"></xs:element>
-                                                 <xs:element name="Telefonszam" type="xs:int"></xs:element>
-                                             </xs:sequence>
-                                          <xs:attribute name="F_ID" type="xs:int"></xs:attribute>
-                                          <xs:attribute name="ET_IDREF" type="xs:int"></xs:attribute>
-                                      </xs:complexType>
-                               </xs:element>
-                            <xs:element name="beszallito" maxOccurs="unbounded">
-                                   <xs:complexType>
-                                          <xs:sequence>
-                                                 <xs:element name="Nev" type="xs:string"></xs:element>
-                                                 <xs:element name="Elerhetoseg" type="xs:string"></xs:element>
-                                                 <xs:element name="Cim">
-                                                        <xs:complexType>
-                                                               <xs:sequence>
-                                                                      <xs:element name="Varos" type="xs:string"></xs:element>
-                                                                      <xs:element name="Iranyitoszam" type="xs:int"></xs:element>
-                                                                      <xs:element name="Utca" type="xs:string"></xs:element>
-                                                                      <xs:element name="Hazszam" type="xs:int"></xs:element>
-                                                                  </xs:sequence>
-                                                           </xs:complexType>
-                                                    </xs:element>
-                                             </xs:sequence>
-                                          <xs:attribute name="Be_ID" type="xs:int"></xs:attribute>
-                                      </xs:complexType>
-                               </xs:element>
-                            <xs:element name="beszallitas" maxOccurs="unbounded">
-                                   <xs:complexType>
-                                          <xs:sequence>
-                                                 <xs:element name="Hozzavalo" type="xs:string"></xs:element>
-                                                 <xs:element name="Datum" type="xs:date"></xs:element>
-                                             </xs:sequence>
-                                          <xs:attribute name="Be_IDREF" type="xs:int"></xs:attribute>
-                                          <xs:attribute name="ET_IDREF" type="xs:int"></xs:attribute>
-                                      </xs:complexType>
-                               </xs:element>
-                            <xs:element name="etel" maxOccurs="unbounded">
-                                   <xs:complexType>
-                                          <xs:sequence>
-                                                 <xs:element name="etel_neve" type="xs:string"></xs:element>
-                                                 <xs:element name="teljes_ar" type="xs:int"></xs:element>
-                                             </xs:sequence>
-                                          <xs:attribute name="Etel_ID" type="xs:int"></xs:attribute>
-                                          <xs:attribute name="ET_IDREF" type="xs:int"></xs:attribute>
-                                      </xs:complexType>
-                               </xs:element>
-                            <xs:element name="vevo" maxOccurs="unbounded">
-                                   <xs:complexType>
-                                          <xs:sequence>
-                                                 <xs:element name="Nev" type="xs:string"></xs:element>
-                                                 <xs:element name="Telefonszam" type="xs:int"></xs:element>
-                                                 <xs:element name="Cim">
-                                                        <xs:complexType>
-                                                               <xs:sequence>
-                                                                      <xs:element name="Utca" type="xs:string"></xs:element>
-                                                                      <xs:element name="Varos" type="xs:string"></xs:element>
-                                                                      <xs:element name="Hazszam" type="xs:int"></xs:element>
-                                                                      <xs:element name="Iranyitoszam" type="xs:int"></xs:element>
-                                                                  </xs:sequence>
-                                                           </xs:complexType>
-                                                    </xs:element>
-                                             </xs:sequence>
-                                          <xs:attribute name="vevo_ID" type="xs:int"></xs:attribute>
-                                      </xs:complexType>
-                               </xs:element>
-                            <xs:element name="bankartya" maxOccurs="unbounded">
-                                   <xs:complexType>
-                                          <xs:sequence>
-                                                 <xs:element name="Bank" type="xs:string"></xs:element>
-                                                 <xs:element name="Lejarati_datum" type="xs:date"></xs:element>
-                                                 <xs:element name="Tipus" type="xs:string"></xs:element>
-                                             </xs:sequence>
-                                          <xs:attribute name="kartyaszam" type="xs:int"></xs:attribute>
-                                          <xs:attribute name="vevo_IDREF" type="xs:int"></xs:attribute>
-                                      </xs:complexType>
-                               </xs:element>
-                        </xs:sequence>
-                     <xs:attribute name="xmlns:xs" type="xs:string"></xs:attribute>
-                     <xs:attribute name="xs:noNamespaceSchemaLocation" type="xs:string"></xs:attribute>
-                 </xs:complexType>
-          </xs:element>
-   </xs:schema>
+	 <!-- Elemek, tulajdonságok -->
+	 
+	<xs:element name="Nyitvatartas" type="xs:string" />
+	<xs:element name="Varos" type="xs:string" />
+    <xs:element name="Utca" type="xs:string" />
+	<xs:element name="Hazszam" type="xs:integer"/>
+	<xs:element name="Telefonszam" type="xs:integer"/>
+	<xs:element name="Weboldal" type="xs:string"/>
+	<xs:element name="Email" type="xs:string"/>
+	<xs:element name="Hozzavalo" type="xs:string"/>
+	<xs:element name="teljes_ar" type="xs:integer"/>
+	<xs:element name="Bank" type="xs:string"/>
+	<xs:element name="Tipus" type="xs:string"/>
+
+	
+	
+	<xs:attribute name="ET_ID" type="xs:integer" />
+	<xs:attribute name="F_ID" type="xs:integer" />
+	<xs:attribute name="Be_ID" type="xs:integer"/>
+	<xs:attribute name="Etel_ID" type="xs:integer"/>
+	<xs:attribute name="vevo_ID" type="xs:integer"/>
+	<xs:attribute name="kartyaszam" type="xs:integer"/>
+	 
+	 
+	<!-- Simple típusok -->
+	
+	
+    <xs:simpleType name="Datum_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(19|20)\d\d.(0[1-9]|1[012]).(0[1-9]|[12][0-9]|3[01])"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+	
+	<xs:simpleType name="Iranyitoszam_type">
+        <xs:restriction base="xs:string">
+          <xs:length value="4" />
+          <xs:pattern value="([0-9])*" />
+        </xs:restriction>
+      </xs:simpleType>
+	  
+	<xs:simpleType name="Nev_type">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[A-Z][a-zA-Z]*( [A-Z][a-zA-Z]*)*" />
+        </xs:restriction>
+      </xs:simpleType>
+	
+	<xs:simpleType name="Lejarati_datum_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(19|20)\d\d.(0[1-9]|1[012]).(0[1-9]|[12][0-9]|3[01])"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+	
+	<!-- Komplex típusok -->
+	
+	<xs:complexType name="Elerhetoseg_tipus">
+        <xs:sequence>
+			<xs:element ref="Varos"/>
+            <xs:element name="Iranyitoszam" type="Iranyitoszam_type"/>
+            <xs:element ref="Utca"/>
+			<xs:element ref="Hazszam"/>
+        </xs:sequence>
+    </xs:complexType>
+	
+	<xs:complexType name="Etterm_elerhetoseg_type">
+        <xs:sequence>
+            <xs:element ref="Telefonszam"/>
+			<xs:element ref="Weboldal"/>
+        </xs:sequence>
+    </xs:complexType>
+	
+	<xs:complexType name="etterem_type">
+		<xs:sequence>
+			<xs:element ref="Nyitvatartas"/>
+			<xs:element name="Nev" type="Nev_type"/>
+			<xs:element name="Elerhetoseg" type="Etterm_elerhetoseg_type"/>
+		</xs:sequence>
+		<xs:attribute ref="ET_ID" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="futar_type">
+		<xs:sequence>
+			<element name="Nev" type="Nev_type"/>
+			<element ref="Telefonszam"/>
+		</xs:sequence>
+		<xs:attribute ref="F_ID" use="required"/>
+		<xs:attribute ref="ET_IDREF" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="beszallito_type">
+		<xs:sequence>
+			<xs:element name="Nev" type="Nev_type"/>
+			<xs:element ref="Weboldal"/>
+			<xs:element name="Cim" type="Elerhetoseg_tipus"/>
+		</xs:sequence>
+		<xs:attribute ref="Be_ID" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="beszallitas_type">
+		<xs:sequence>
+			<xs:element ref="Hozzavalo"/>
+			<xs:element name="Datum" type="Datum_type"/>
+		</xs:sequence>
+		<xs:attribute ref="Be_IDREF" use="required"/>
+		<xs:attribute ref="ET_IDREF" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="etel_type">
+		<xs:sequence>
+			<xs:element name="Nev" type="Nev_type"/>
+			<xs:element ref="teljes_ar"/>
+		</xs:sequence>
+		<xs:attribute ref="Etel_ID" use="required"/>
+		<xs:attribute ref="ET_IDREF" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="vevo_type">
+		<xs:sequence>
+			<xs:element name="Nev" type="Nev_type"/>
+			<xs:element ref="Telefonszam"/>
+			<xs:element name="Cim" type="Elerhetoseg_tipus"/>
+		</xs:sequence>
+		<xs:attribute ref="vevo_ID" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="bankartya_type">
+		<xs:sequence>
+			<xs:element ref="Bank"/>
+			<xs:element name="Lejarati_datum" type="Datum_type"/>
+			<xs:element ref="Tipus"/>
+		</xs:sequence>
+		<xs:attribute ref="kartyaszam" use="required"/>
+		<xs:attribute ref="vevo_IDREF" use="required"/>
+	</xs:complexType>
+			
+			
+			
+		
+	<!-- Kulcsok -->
+	
+	
+	<xs:key name="ET_ID">
+        <xs:selector xpath="etterem_type"/>
+        <xs:field xpath="@ET_ID"/>
+    </xs:key>
+	
+	<xs:key name="F_ID">
+		<xs:selector xpath="futar_type"/>
+		<xs:field xpath="@F_ID"/>
+	</xs:key>
+	
+	<xs:key name="Be_ID">
+		<xs:selector xpath="beszallito_type"/>
+		<xs:field xpath="@Be_ID"/>
+	</xs:key>
+	
+	<xs:key name="Etel_ID">
+		<xs:selector xpath="etel_type"/>
+		<xs:field xpath="@Etel_ID"/>
+	</xs:key>
+	
+	<xs:key name="vevo_ID">
+		<xs:selector xpath="vevo_type"/>
+		<xs:fiel xpath="@vevo_ID"/>
+	</xs:key>
+	
+	<xs:key name="kartyaszam">
+		<xs:selector xpath="bankartya_type"/>
+		<xs:fiel xpath="@kartyaszam"/>
+	</xs:key>
+			
+			
+	<!-- Idegen kulcsok -->
+	
+	<xs:keyref name="etterem_FK1" refer="ET_ID">
+		<xs:selector xpath="etterem_type"></xs:selector>
+		<xs:field xpath="@ET_IDREF"></xs:field>
+	</xs:keyref>
+	
+	<xs:keyref name="beszallito_FK" refer="Be_ID">
+		<xs:selector xpath="beszallito_type"></xs:selector>
+		<xs:field xpath="@Be_IDREF"></xs:field>
+	</xs:keyref>
+	
+	<xs:keyref name="etterem_FK2" refer="ET_ID">
+		<xs:selector xpath="etel_type"></xs:selector>
+		<xs:field xpath="@ET_IDREF"></xs:field>
+	</xs:keyref>
+	
+	<xs:keyref name="etterem_FK3" refer="ET_ID">
+		<xs:selector xpath="beszallitas_type"></xs:selector>
+		<xs:field xpath="@ET_IDREF"></xs:field>
+	</xs:keyref>
+	
+	<xs:keyref name="vevo_FK" refer="vevo_ID">
+		<xs:selector xpath="bankartya_type"></xs:selector>
+		<xs:field xpath="@vevo_IDREF"></xs:field>
+	</xs:keyref>
+		
+ </xs:schema>
