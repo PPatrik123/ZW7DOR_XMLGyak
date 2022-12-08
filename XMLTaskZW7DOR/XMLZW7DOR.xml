@@ -160,7 +160,7 @@
         <Tipus>betéti kártya</Tipus>
     </bankartya>
 
-    <bankartya kartyaszam="(0543345349664954" vevo_IDREF="1">
+    <bankartya kartyaszam="0543345349664954" vevo_IDREF="1">
         <Bank>MKB</Bank>
         <Lejarati_datum>2025.10.29</Lejarati_datum>
         <Tipus>hitelkártya</Tipus>
